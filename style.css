@@ -1,0 +1,223 @@
+/* استيراد خط جميل */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+/* تنسيق عام للصفحة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    background: url('https://u7.uidownload.com/vector/198/1/vector-black-background-design-eps.jpg') repeat; /* استبدل بالصورة التي تريدها */
+    background-size: contain;
+    background-attachment: fixed;
+    
+}
+
+/* ====== ترويسة الموقع ====== */
+header {
+    background: #000;
+    color: #fff;
+    text-align: none;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* ====== قائمة القرّاء ====== */
+.reciters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.reciter {
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reciter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+.reciter h2 {
+    margin: 0;
+    color: #007bff;
+    font-size: 22px;
+}
+
+.reciter p {
+    color: #666;
+}
+.reciter img{
+  width: 100px;  /* تحديد العرض */
+    height: 100px; /* تحديد الارتفاع */
+    border-radius: 50%; /* يجعل الصورة دائرية */
+    object-fit: cover; /* يضمن عدم تشويه الصورة */
+}
+
+/* ====== خلفية زخرفية لصفحة القارئ ====== */
+.reader-page {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== قائمة السور في صفحة القارئ ====== */
+.surah-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.surah {
+    background: white;
+    width: 100vw;
+    
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.surah:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+.surah p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ====== مشغل الصوت ====== */
+
+
+/* ====== زر الرجوع ====== */
+.back {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ====== تحسين استجابة التصميم للشاشات الصغيرة ====== */
+@media (max-width: 768px) {
+    .reciters-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reciter {
+        width: 90%;
+    }
+
+    .reader-page {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .surah {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+/* تنسيق المشغل */
+audio {
+    width: 100%;
+    max-width: 400px; /* يمكنك ضبط الحجم حسب الحاجة */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    
+    background-color: #1d3557;
+    padding: 10px;
+}
+
+/* إخفاء الافتراضي لبعض المتصفحات */
+audio::-webkit-media-controls-panel {
+    
+    background-color: #1d3557;
+    border-radius: 10px;
+}
+
+/* تخصيص الأزرار في المتصفحات التي تدعم ذلك */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    background-color: #1d3557;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+audio::-webkit-media-controls-timeline {
+    
+    background-color: #1d3557;
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+}
+
+/* تحسين النص البديل عند عدم دعم المشغل */
+.fallback-text {
+    text-align: center;
+    font-size: 18px;
+    color: #e63946;
+    margin-top: 10px;
+}
+
+
